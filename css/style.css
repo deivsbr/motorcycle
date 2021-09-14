@@ -1,0 +1,766 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body{
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+/* MENU */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.5s;
+}
+
+.hamb {
+    margin-left: 30px;
+    margin-top: 2px;
+    width: 50px;
+   
+}
+.overlay-content {
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 15px;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+    overflow-x: hidden;
+    
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: rgb(82, 82, 82);
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: -20px;
+    right: 15px;
+    font-size: 60px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* HOME */
+    #homeImg {
+       width: 100%;
+       background-size: cover;
+    }
+
+    .center {
+        display: flex;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+        margin-top: -50%;
+    }
+
+    .motorcycle {
+        font-family: 'Orbitron', sans-serif;
+        font-style: italic;
+        color: #fff;
+        text-shadow: 5px 5px rgb(0, 0, 0);
+        font-size: 24px;
+    } 
+
+   /* HISTORIA */
+    .titleH2 {
+        margin-top: 250px;
+        text-align: center;
+        letter-spacing: 5px;
+        font-size: 30px;
+        flex-direction: column;
+    }
+
+     .infoFlex{
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .imgMoto {
+        flex-direction: column;
+        width: 240px;
+        height: 200px;
+        margin-top: 30px;
+    }
+
+    .txtH {
+        display: flex;
+        margin-top: 40px;
+        margin-left: 20px;
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .seta {
+        width: 80px;
+        height: 80px;
+        float: right;
+        padding: 20px;
+        transform: rotate(180deg);
+    }
+
+    .setaG {
+        width: 80px;
+        height: 80px;
+        margin-left: 280px;
+        padding: 20px;
+        transform: rotate(180deg);
+    }
+   
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 300px;
+        margin-top: 50px;
+        background-color: #d1d1d18c;
+    }
+
+    .aFooter {
+        color: red;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .descFooter {
+        margin-bottom: 50px;
+    }
+
+    /* MARCAS */
+    .imgPrincipal{
+        width: 100%;
+        height: 80%;
+        margin-top: 0px;
+    }
+
+    .txtMarcas {
+        display: flex;
+        margin-top: 40px;
+        margin-left: 20px;
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    .bmw {
+        width: 200px;
+        height: 200px;
+        margin-left: 25px;
+        margin-top: 80px;
+    }
+
+    .imgLogoMoto {
+        width: 250px;
+        height: 200px;
+        flex-direction: column;
+        margin-top: -100px;
+        }
+    
+
+    /* CAROUSEL */
+    .slider {
+        margin: 270px 0 0 2px;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .slides {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .slides input {
+        display: none;
+    }
+
+    .slide {
+        width: 100%;
+        transition: 2s;
+    }
+
+    .slide img {
+        width: 300px;
+        height: 250px;
+    }
+
+    /* css for manual slide navigation */
+    .navigation-manual {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        margin-top: 220px;
+        margin-left: 110px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .manual-btn {
+        border: 2px solid rgb(255, 255, 255);
+        padding: 5px;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+
+    .manual-btn:hover {
+        background: rgb(219, 217, 217);
+    }
+
+    #radio1:checked ~ .first{
+        margin-left: 0;
+    }
+
+    #radio2:checked ~ .first{
+        margin-left: -100%;
+    }
+
+    #radio3:checked ~ .first{
+        margin-left: -200%;
+    }
+
+    #radio4:checked ~ .first{
+        margin-left: -300%;
+    }
+
+
+    /* CONTATO */
+        form {
+            width: 300px;
+            height: 800px;
+            margin-top: 250px;
+            padding: 40px;
+            border-radius: 10px;
+            border: 8px double rgb(0, 0, 0);
+            background-color: rgba(102, 102, 102, 0);
+        }
+
+        .h1Form {
+            padding-bottom: 20px;
+            text-align: center;
+            color: #000;
+        }
+
+        input, label {
+            width: 120%;
+            height: 8%;
+            margin: 10px 0px 20px -25px;
+            padding: 10px;
+            border: none;
+        }
+
+        textarea {
+            width: 120%;
+            margin: 15px 0px 10px -25px;
+            padding: 10px;
+            border: none;
+        }
+
+        input, textarea {
+            border: none;
+            border-bottom: 2px solid rgb(0, 0, 0);
+        }
+
+        .btnForm {
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(16, 90, 250);
+            color: rgb(253, 253, 253);
+            font-size: 20px;
+            margin-top: 20px;
+            margin-left: 50px;
+            text-transform: uppercase;
+        }
+
+ /* Small devices (landscape phones, 576px and up) */
+ @media (min-width: 576px) { 
+    .overlay .closebtn {
+        position: absolute;
+        top: -10px;
+        right: 35px;
+        font-size: 60px;
+    }
+
+    .center {
+        margin-top: -20%;
+        margin-left: -20%;
+    }
+
+    .motorcycle {
+        font-size: 50px;
+        text-shadow: 5px 8px rgb(0, 0, 0);
+        margin-top: -50%;
+        margin-left: 15%;
+    }
+
+     .titleH2 {
+        margin-top: 320px;
+        font-size: 50px;
+        flex-direction: column;
+    } 
+
+    .infoFlex {
+        max-width: 450px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .setaG {
+        margin-left: 510px;
+    }
+
+    /* CAROUSEL */
+
+    .slider {
+        margin: 350px 0 0 2px;
+        width: 500px;
+        height: 500px;
+        border-radius: 10px;
+    }
+
+    .slides {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .slide img {
+        width: 500px;
+        height: 350px;
+    }
+
+    /* css for manual slide navigation */
+    .navigation-manual {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        margin-top: 310px;
+        margin-left: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* CONTATO */
+    form {
+      width: 500px;
+      height: 800px;
+      margin-top: 350px;
+    }
+
+    .h1Form {
+      font-size: 50px;
+    }
+
+    input, label {
+      width: 110%;
+      height: 8%;
+      margin-left: -20px;
+    }
+
+    label {
+        font-size: 26px;
+    }
+
+    textarea {
+      width: 110%;
+      margin-left: -20px;
+    }
+
+    .btnForm {
+      margin-left: 150px;
+    }
+ }
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .motorcycle {
+        text-shadow: 5px 8px rgb(0, 0, 0);
+        font-size: 70px;
+    }
+
+    .titleH2 {
+        margin-top: 400px;
+    }
+
+    .infoFlex {
+        max-width: 600px;
+        flex-direction: column;
+    }
+
+    .hamb {
+        margin-left: 20px;
+    }
+
+    .setaG {
+        margin-left: 680px;
+    }
+
+
+    /* CAROUSEL */
+
+    .slider {
+        margin: 450px 0 0 2px;
+        width: 700px;
+        height: 500px;
+        border-radius: 10px;
+    }
+
+    .slides {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .slide img {
+        width: 700px;
+        height: 500px;
+    }
+
+    /* css for manual slide navigation */
+    .navigation-manual {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        margin-top: 450px;
+        margin-left: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* CONTATO */
+    form {
+      width: 700px;
+      height: 900px;
+      margin-top: 300px;
+    }
+
+    .h1Form {
+      font-size: 50px;
+    }
+
+    input, label {
+      width: 100%;
+      height: 8%;
+      margin-left: -5px;
+    }
+
+    textarea {
+      width: 100%;
+      margin-left: -5px;
+    }
+
+    .btnForm {
+      margin-left: 250px;
+    }
+ }
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  
+    .motorcycle {
+        text-shadow: 8px 10px rgb(0, 0, 0);
+        font-size: 80px;
+        margin-left: 10%;
+    }
+
+    .titleH2 {
+        margin-top: 500px;
+    }
+
+    .imgMoto {
+        width: 400px;
+        height: 250px;
+    }
+
+
+    .infoFlex {
+        max-width: 800px;
+        flex-direction: column;
+    }
+
+    .setaG {
+        margin-left: 900px;
+    }
+
+
+      /* CAROUSEL */
+
+      .slider {
+        margin: 550px 0 0 2px;
+        width: 900px;
+        height: 600px;
+        border-radius: 10px;
+    }
+
+    .slides {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .slide img {
+        width: 900px;
+        height: 600px;
+    }
+
+    /* css for manual slide navigation */
+    .navigation-manual {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        margin-top: 550px;
+        margin-left: 410px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* CONTATO */
+    form {
+        width: 900px;
+        height: 900px;
+        margin-top: 300px;
+      }
+  
+      .h1Form {
+        font-size: 50px;
+      }
+  
+      input, label {
+        width: 100%;
+        height: 8%;
+        margin-left: -5px;
+      }
+  
+      textarea {
+        width: 100%;
+        margin-left: -5px;
+      }
+  
+      .btnForm {
+        margin-left: 350px;
+      }
+}
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .motorcycle {
+        text-shadow: 8px 10px rgb(0, 0, 0);
+        font-size: 120px;   
+    }
+
+    .titleH2 {
+        margin-top: 600px;
+    }
+
+    .infoFlex {
+        flex-direction: column;
+        max-width: 1000px;
+    }
+
+    .txtH {
+        font-size: 24px;
+    }
+
+    .setaG {
+        margin-left: 1100px;
+    }
+
+
+      /* CAROUSEL */
+
+      .slider {
+        margin: 650px 0 0 2px;
+        width: 1100px;
+        height: 900px;
+        border-radius: 10px;
+    }
+
+    .slides {
+        width: 100%;
+        height: 900px;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .slide img {
+        width: 1100px;
+        height: 900px;
+    }
+
+    /* css for manual slide navigation */
+    .navigation-manual {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        margin-top: 850px;
+        margin-left: 500px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* CONTATO */
+    form {
+        width: 1000px;
+        height: 1000px;
+        margin-top: 400px;
+      }
+  
+      .h1Form {
+        font-size: 50px;
+      }
+  
+      input, label {
+        width: 100%;
+        height: 8%;
+        margin-left: -5px;
+      }
+  
+      textarea {
+        width: 100%;
+        margin-left: -5px;
+      }
+  
+      .btnForm {
+        margin-left: 400px;
+      }
+
+  }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .motorcycle {
+        /* color:yellow; */
+        font-size: 140px;
+    }
+    .infoFlex {
+        flex-direction: column;
+        max-width: 1300px;
+    }
+
+    .titleH2{
+        margin-top: 800px;
+        font-size: 60px;
+    }
+
+    .imgMoto{
+        width: 450px;
+        height: 350px;
+    }
+
+    .txtH {
+        font-size: 28px;
+    }
+
+    .hh {
+        margin-top: 200px;
+    }
+
+    .setaG {
+        margin-left: 1300px;
+    }
+
+
+      /* CAROUSEL */
+
+      .slider {
+        margin: 850px 0 0 2px;
+        width: 1300px;
+        height: 1100px;
+        border-radius: 10px;
+    }
+
+    .slides {
+        width: 100%;
+        height: 1300px;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .slide img {
+        width: 1300px;
+        height: 1100px;
+    }
+
+    /* css for manual slide navigation */
+    .navigation-manual {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        margin-top: 1050px;
+        margin-left: 600px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* CONTATO */
+    form {
+        width: 1000px;
+        height: 1000px;
+        margin-top: 450px;
+      }
+  
+      .h1Form {
+        font-size: 50px;
+      }
+  
+      input, label {
+        width: 100%;
+        height: 8%;
+        margin-left: -5px;
+      }
+  
+      textarea {
+        width: 100%;
+        margin-left: -5px;
+      }
+  
+      .btnForm {
+        margin-left: 400px;
+      }
+  }
+

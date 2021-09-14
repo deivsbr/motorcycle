@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="sortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+     <!-- MENU -->
+     <div id="menu" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="hamb" href="#" onclick="openNav()">&#9776;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="marcas.html">Marcas</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </div>
+
+    <!-- IMG PRINCIPAL -->
+    <div class="container">
+        <div class="home">
+            <img class="imgPrincipal" src="./img/pexels-tim-gouw-5800215.jpg" alt="">
+            <div class="center">
+                <h1 class="motorcycle">MOTORCYCLE</h1>
+            </div>
+        </div>
+   
+       <!-- CARROUSEL -->
+       <div class="slider">
+           <div class="slides">
+               <!-- radio buttons start -->
+               <input type="radio" name="radio-btn" id="radio1">
+               <input type="radio" name="radio-btn" id="radio2">
+               <input type="radio" name="radio-btn" id="radio3">
+               <input type="radio" name="radio-btn" id="radio4">
+                <!-- radio buttons end -->
+                <!-- slide image start -->
+                <div class="slide first">
+                    <img src="./img/pexels-bhupendra-singh-1143824.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/pexels-sourav-mishra-4515543.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/pexels-tim-gouw-5800215.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/bradley-dunn-9ZCcFLcLNQE-unsplash (1).jpg" alt="">
+                </div>
+                <!-- slide image end -->
+                
+                <!-- manual navigation start -->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+                <!-- manual navigation end -->
+            </div>
+       </div>
+    
+
+    <!-- FOOTER -->
+    <a href="#"><img class="setaG" src="./img/setas.png" alt="Seta Topo"></a>
+    <footer>
+       
+        <img class="imgMoto" src="./img/footerMotoGP.png" alt="imagem Footer">
+        <p class="descFooter">Criado por <a class="aFooter">Deivs Dev</a> 2021.</p>
+        
+    </footer>
+    <script src="./js/script.js"></script>
+    
+</body>
+</html>
